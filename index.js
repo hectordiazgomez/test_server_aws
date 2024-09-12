@@ -62,7 +62,6 @@ app.get("/random", (req, res) => {
     res.json({ number: randomNumber });
 });
 
-const port = 3000;
 const host = '0.0.0.0';
 
 app.listen(port, host, () => {
