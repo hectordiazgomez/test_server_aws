@@ -5,7 +5,7 @@ const app = express();
 app.use(cors());
 app.use(express.json());
 
-const port = 80;
+const port = 3000;
 
 app.get("/", (req, res) => {
     res.json({ message: "Welcome to the API" });
