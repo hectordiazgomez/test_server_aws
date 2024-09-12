@@ -62,6 +62,9 @@ app.get("/random", (req, res) => {
     res.json({ number: randomNumber });
 });
 
-app.listen(port, () => {
-    console.log(`App running on port ${port}`);
+const port = 3000;
+const host = '0.0.0.0';
+
+app.listen(port, host, () => {
+  console.log(`App running on ${host}:${port}`);
 });
