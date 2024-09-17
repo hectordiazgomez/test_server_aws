@@ -1,9 +1,18 @@
 import express from "express";
+import cors from "cors";
 
 const app = express();
+app.use(cors());
 app.use(express.json());
 
 const port = 5000;
+
+// Sample array of data
+let data = [
+    { id: 1, name: "Item 1", value: 100 },
+    { id: 2, name: "Item 2", value: 200 },
+    { id: 3, name: "Item 3", value: 300 },
+];
 
 app.get("/", (req, res) => {
     res.json({ message: "Welcome to the API" });
@@ -58,6 +67,23 @@ app.get("/random", (req, res) => {
     const max = parseInt(req.query.max) || 100;
     const randomNumber = Math.floor(Math.random() * (max - min + 1)) + min;
     res.json({ number: randomNumber });
+});
+
+// PUT method to update data in the array
+app.put("/update", (req, res) => {
+    const { id, newData } = req.body;
+
+    // Find the item in the array
+    const item = data.find(d => d.id === parseInt(id));
+
+    if (!item) {
+        return res.status(404).json({ error: `Item with ID ${id} not found` });
+    }
+
+    // Update the item's properties with newData
+    Object.assign(item, newData);
+
+    res.json({ message: `Data with ID ${id} has been updated`, updatedItem: item });
 });
 
 const host = '0.0.0.0';
