@@ -72,7 +72,6 @@ app.get("/random", (req, res) => {
 app.put("/update", (req, res) => {
     const { id, newData } = req.body;
 
-    // Find the item in the array
     const item = data.find(d => d.id === parseInt(id));
 
     if (!item) {
