@@ -68,7 +68,6 @@ app.get("/random", (req, res) => {
     res.json({ number: randomNumber });
 });
 
-// PUT method to update data in the array
 app.put("/update", (req, res) => {
     const { id, newData } = req.body;
 
