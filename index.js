@@ -14,7 +14,7 @@ let data = [
 ];
 
 app.get("/", (req, res) => {
-    res.json({ message: "Hola amiguis xd x15" });
+    res.json({ message: "La mitad de mi alma se ha quedado contigo" });
 });
 
 app.get("/hello", (req, res) => {
