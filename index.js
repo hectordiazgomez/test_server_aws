@@ -83,8 +83,6 @@ app.put("/update", (req, res) => {
     res.json({ message: `Data with ID ${id} has been updated`, updatedItem: item });
 });
 
-const host = '0.0.0.0';
-
-app.listen(port, host, () => {
-  console.log(`App running on ${host}:${port}`);
+app.listen(port, () => {
+  console.log(`App running on ${port}`);
 });
