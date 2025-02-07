@@ -14,7 +14,7 @@ let data = [
 ];
 
 app.get("/", (req, res) => {
-    res.json({ message: "Testing splits of CPU and RAM 3" });
+    res.json({ message: "Testing splits of CPU and RAM 4" });
 });
 
 app.get("/hello", (req, res) => {
