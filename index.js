@@ -5,7 +5,7 @@ const app = express();
 app.use(cors());
 app.use(express.json());
 
-const port = 5000;
+const port = 8000;
 
 let data = [
     { id: 1, name: "Item 1", value: 100 },
