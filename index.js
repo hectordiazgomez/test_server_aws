@@ -5,7 +5,7 @@ const app = express();
 app.use(cors());
 app.use(express.json());
 
-const port = 8000;
+const port = 9000;
 
 let data = [
     { id: 1, name: "Item 1", value: 900 },
@@ -14,7 +14,7 @@ let data = [
 ];
 
 app.get("/", (req, res) => {
-    res.json({ message: "Se supone" });
+    res.json({ message: "Test dos de funcionamiento" });
 });
 
 app.get("/hello", (req, res) => {
