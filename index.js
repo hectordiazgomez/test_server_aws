@@ -14,7 +14,7 @@ let data = [
 ];
 
 app.get("/", (req, res) => {
-    res.json({ message: "Test doce de funcionamiento" });
+    res.json({ message: "Test trece de funcionamiento" });
 });
 
 app.get("/hello", (req, res) => {
